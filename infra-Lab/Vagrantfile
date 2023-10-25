@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# To enable zsh, please set ENABLE_ZSH env var to "true" before launching vagrant up 
+#   + On windows => $env:ENABLE_ZSH="true"
+#   + On Linux  => export ENABLE_ZSH="true"
+
+# Définition des variables
+RAM = 2048
+CPU = 2
+IP = "192.168.99.70"
+TYPE = "static"
+NAME = "minikube"
+
+Vagrant.configure("2") do |config|
+  config.vm.define "myvm" do |myvm|
+    myvm.vm.box = "geerlingguy/centos7"
+    myvm.vm.network "private_network", type: TYPE, ip: IP
+    myvm.vm.hostname = NAME
+	
+    myvm.vm.provider "virtualbox" do |v|
+      v.name = NAME
+      v.memory = RAM
+      v.cpus = CPU
+    end
+	
+    myvm.vm.provision :shell do |shell|
+      shell.path = "install-minikube.sh"
+      shell.env = { 'ENABLE_ZSH' => ENV['ENABLE_ZSH'] }
+    end
+  end
+end
