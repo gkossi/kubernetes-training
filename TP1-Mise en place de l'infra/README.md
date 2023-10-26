@@ -11,7 +11,7 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 
 # Les Technos utilisées :
 
-<!--div align="center"-->
+<div>
 
 <!--img src="https://github.com/Tony-Dja/Jenkins_pipeline_HEROKU_deployment/blob/672b58d62fa5d424fb7162e33546c67f3bcbebc2/screenshots/jenkins.png" width="50%" height="50%"-->
 
@@ -29,13 +29,13 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 	<img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/bash/bash-original.svg" alt="bash" width="45" height="45"/>  
 </a>
 
-<!--/div-->
+</div>
  <br />
-<!--div align="center"-->
+<div align="center">
 
 ![Static Badge](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white)       ![Static Badge](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)        ![Static Badge](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)     ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)     ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
-<!--/div-->
+</div>
 
 - VirtualBox : est un hyperviseur de type 2 qui va servir de provisioner à utiliser pour créer une VM
 - Vagrant : c'est un gestionnaire d'infrastructure as Code qui va servir à configurer notre infra sous forme de code
