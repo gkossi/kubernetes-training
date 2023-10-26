@@ -17,17 +17,16 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 <!--img src="https://github.com/Tony-Dja/Jenkins_pipeline_HEROKU_deployment/blob/672b58d62fa5d424fb7162e33546c67f3bcbebc2/screenshots/jenkins.png" width="50%" height="50%"-->
 
 <img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/virtualbox/virtualbox-original.svg" width="45" height="45"/>
+<img src="https://cdn-icons-png.flaticon.com/512/197/197443.png" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/vagrant/vagrant-original.svg" width="45" height="45"/>
 <a href="https://git-scm.com/" target="_blank">
 	<img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/git/git-original.svg" width="45" height="45"/>
 </a>
 <a href="https://www.docker.com/" target="_blank">
 	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="45" height="45"/>
-	<img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/docker/docker-original.svg" width="45" height="45"/>
 </a>
 <a href="https://kubernetes.io" target="_blank">
 	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg" alt="kubernetes" width="45" height="45"/>
-	<img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/kubernetes/kubernetes-original.svg" width="45" height="45"/>
 </a>
 <img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/centos/centos-original.svg" width="45" height="45"/> 
 <a href="https://www.gnu.org/software/bash/" target="_blank"> 
