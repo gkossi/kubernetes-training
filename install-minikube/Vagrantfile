@@ -5,7 +5,7 @@
 #   + On Linux  => export ENABLE_ZSH="true"
 
 # Définition des variables
-RAM = 2048
+RAM = 4096
 CPU = 2
 IP = "192.168.99.70"
 TYPE = "static"

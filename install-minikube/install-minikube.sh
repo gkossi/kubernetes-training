@@ -6,29 +6,29 @@
 #	- Git: pour versionner le code source
 #	- Docker: pour conteneuriser les applications afin d'utiliser les concepts de microservices
 #	- Minikube: pour la mise en place d'un cluster Kubernetes (1 Master et 1 Worker)
-#	- Jenkins: pour la réalisation du pipeline CI/CD
-#	- Kubernetes: pour l'orchestration des conteneurs
+#	- Kubectl: la ligne de commande pour exploiter Kubernetes à partir de Minikube
 # 	Repository utile : https://github.com/diranetafen/cursus-devops.git
 #--------------------------------------------------------------------------------------------------------
 
-#---1. mise à jour du système----------------------------------------------------------------------------
-sudo yum update && sudo yum upgrade -y
+#---ETAPE N°1: MISE À JOUR DU SYSTÈME----------------------------------------------------------------------------
+sudo yum update
 
-#---2. installation de quelques paquets et dépendances nécessaires---------------------------------------
+#---ETAPE N°2: INSTALLATION DE QUELQUES PAQUETS ET DÉPENDANCES NÉCESSAIRES---------------------------------------
 #installation de epel-release (extra package for enterprise linux)
-sudo yum install -y epel-release
-#installation d'autres paquets et dépendances nécessaires
-sudo yum install -y curl wget yum-transport-https
+sudo yum -y install epel-release
 #On va installer les paquets qui vont permettre d'installer la machine virtuelle MINIKUBE qui contient KUBERNETES
-sudo yum install -y git libvirt qemu-kvm virt-install virt-top libguestfs-tools bridge-utils
+sudo yum -y install git libvirt qemu-kvm virt-install virt-top libguestfs-tools bridge-utils
 #On va installer le paquet permettant de faire le forwarding (mécanisme permettant d'avoir accès aux ressources du cluster à partir de l'extérieur)
-sudo yum install -y socat
+sudo yum install socat -y
 #On va installer le paquet permettant de gérer l'utilisation du processeur sur notre machine
 sudo yum install -y conntrack
+#installation d'autres paquets nécessaires
+sudo yum install -y curl wget
 
-#---3. INSTALLATION DE DOCKER----------------------------------------------------------------------------
+
+#---ETAPE N°3: INSTALLATION DE DOCKER----------------------------------------------------------------------------
 #Récupérer le script d'installation de docker
-curl -fsSL https://get.docker.com -o get-docker.sh
+sudo curl -fsSL https://get.docker.com -o get-docker.sh
 #Inspecter le contenu du script pour des raisons de sécurité (Optionnel)
 cat get-docker.sh
 #Vérifier les étape qui seront effectuées lorsque le script sera exécuté (pour des raison de sécurité)
@@ -43,7 +43,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 
 
-#---6. INSTALLATION DE MINIKUBE--------------------------------------------------------
+#---ETAPE N°4: INSTALLATION DE MINIKUBE--------------------------------------------------------
 # https://kubernetes.io/fr/docs/tasks/tools/install-minikube/
 
 #On va Récupérer minikube
@@ -59,9 +59,7 @@ sudo chmod +x kubectl
 #On va déplacer minikube dans le répertoire des binaires sous linux
 sudo mv kubectl  /usr/bin/
 #On va configurer le forwarding pour l'accès réseau
-sudo su
 sudo echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
-exit
 #On va activer le service docker au démarrage
 sudo systemctl enable docker.service
 #On va installer minikube à partir du fichier rendu exécutable
@@ -72,7 +70,7 @@ echo 'alias k=kubectl' >> ~vagrant/.bashrc
 echo 'complete -F __start_kubectl k' >> ~vagrant/.bashrc
 
 
-#---8. INSTALLATION DU SHELL ZSH-------------------------------------------------------------------------
+#---ETAPE N°5: INSTALLATION DU SHELL ZSH-------------------------------------------------------------------------
 if [[ !(-z "$ENABLE_ZSH")  &&  ($ENABLE_ZSH == "true") ]]
 then
     echo "We are going to install zsh"
