@@ -17,7 +17,7 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 <!--img src="https://github.com/Tony-Dja/Jenkins_pipeline_HEROKU_deployment/blob/672b58d62fa5d424fb7162e33546c67f3bcbebc2/screenshots/jenkins.png" width="50%" height="50%"-->
 
 <img src="https://cdn-icons-png.flaticon.com/512/197/197443.png" width="45"/>
-<img src="https://cdn-icons-png.flaticon.com/512/197/873151.png" width="45"/>
+<img src="https://www.flaticon.com/free-icon/virtualbox_873151?term=virtualbox&related_id=873151" width="45"/>
 
 <img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/vagrant/vagrant-original.svg" width="45" height="45"/>
 <a href="https://git-scm.com/" target="_blank">
