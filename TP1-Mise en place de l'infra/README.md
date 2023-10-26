@@ -1,3 +1,4 @@
+<div>
 # Infos sur le réalisateur du projet
 Session       : Bootcamp DevOps N°15 chez Eazytraining
 
@@ -11,7 +12,8 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 
 # Les Technos utilisées :
 
-<div>
+</div>
+<div align="center">
 
 <!--img src="https://github.com/Tony-Dja/Jenkins_pipeline_HEROKU_deployment/blob/672b58d62fa5d424fb7162e33546c67f3bcbebc2/screenshots/jenkins.png" width="50%" height="50%"-->
 
@@ -37,6 +39,7 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 
 </div>
 
+<div>
 - VirtualBox : est un hyperviseur de type 2 qui va servir de provisioner à utiliser pour créer une VM
 - Vagrant : c'est un gestionnaire d'infrastructure as Code qui va servir à configurer notre infra sous forme de code
 - Vagrantfile: ce fichier contient tous les paramètres utilisés pour créer la machine virtuelle
@@ -76,8 +79,6 @@ My delivery contain five main files : ***Vagrantfile***, ***install_docker-cento
 
 
 
-# BUILDING IMAGE AND TESTING STEP BY STEP
-
 
 ## Step N°1 : Building images
 
@@ -94,3 +95,4 @@ docker build -t student-list-api-image .
 docker images
 ```
 > ![1-docker images] ![](images/docker-images.jpg)
+</div>
