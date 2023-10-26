@@ -1,4 +1,3 @@
-
 # Infos sur le réalisateur du projet
 Session       : Bootcamp DevOps N°15 chez Eazytraining
 
@@ -13,8 +12,6 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 # Les Technos utilisées :
 
 <div align="center">
-
-<!--img src="https://github.com/Tony-Dja/Jenkins_pipeline_HEROKU_deployment/blob/672b58d62fa5d424fb7162e33546c67f3bcbebc2/screenshots/jenkins.png" width="50%" height="50%"-->
 
 <img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/virtualbox/virtualbox-original.svg" width="45" height="45"/>
 
@@ -37,13 +34,12 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 </a>
 </div>
 
- <br />
+<br />
 <div align="center">
 
 ![Static Badge](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white)       ![Static Badge](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)        ![Static Badge](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)     ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)     ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 </div>
-
 
 - VirtualBox : est un hyperviseur de type 2 qui va servir de provisioner à utiliser pour créer une VM
 - Vagrant : c'est un gestionnaire d'infrastructure as Code qui va servir à configurer notre infra sous forme de code
@@ -54,7 +50,9 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 - Minikube: pour la mise en place d'un cluster Kubernetes (1 Master et 1 Worker)
 - Kubectl : la ligne de commande pour exploiter Kubernetes à partir de Minikube
 
-My job is to :
+
+#My job is to :
+
 1) Use Virtualbox as a hypervisor for the virtual machine creation
 2) Use Vagrant as infrastructure provisioner to manage the VM
 3) Install Docker and Docker-compose on the VM 
@@ -62,6 +60,7 @@ My job is to :
 5) Make the containers interact with each other
 6) Provide a private registry to store images
 
+<br />
 
 # My work plan
 
@@ -73,17 +72,15 @@ Here's my plan for this project:
 
 - Then, as soon as the tests are correct, I proceed with the deployment
 
-
+<br />
 
 # The files and their roles
-
 My delivery contain five main files : ***Vagrantfile***, ***install_docker-centos.sh***, ***Dockerfile***, ***docker-compose.yml*** and ***private-registry.yml***
 
 - Vagrantfile: this file contains all the parameters used to create the virtual machine
 - install_docker-centos.sh: this file contains the Docker and Docker-compose installation script
 
-
-
+<br />
 
 ## Step N°1 : Building images
 
@@ -100,3 +97,5 @@ docker build -t student-list-api-image .
 docker images
 ```
 > ![1-docker images] ![](images/docker-images.jpg)
+
+
