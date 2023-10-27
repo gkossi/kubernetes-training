@@ -38,7 +38,7 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 ![Static Badge](https://img.shields.io/badge/VirtualBox-red?style=for-the-badge&logo=VirtualBox&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Vagrant-430098?style=for-the-badge&logo=Vagrant&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Git-black?style=for-the-badge&logo=Git&logoColor=red)
-![Static Badge](https://img.shields.io/badge/Docker-white?style=for-the-badge&logo=Docker&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Docker-white?style=for-the-badge&logo=Docker&logoColor=2CA5E0)
 ![Static Badge](https://img.shields.io/badge/Kubernetes-2CA5E0?style=for-the-badge&logo=Kubernetes&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Centos-cyan?style=for-the-badge&logo=Centost&logoColor=white)
 
