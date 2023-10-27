@@ -35,7 +35,13 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 <br />
 <div align="center">
 
-![Static Badge](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white)       ![Static Badge](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)        ![Static Badge](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)     ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)     ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![Static Badge](https://img.shields.io/badge/VirtualBox-red?style=for-the-badge&logo=VirtualBox&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Vagrant-430098?style=for-the-badge&logo=Vagrant&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Git-back?style=for-the-badge&logo=Git&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=Docker&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Kubernetes-2CA5E0?style=for-the-badge&logo=Kubernetes&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Centos-cyan?style=for-the-badge&logo=Centost&logoColor=white)
+
 
 </div>
 
