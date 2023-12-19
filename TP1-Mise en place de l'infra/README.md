@@ -76,32 +76,32 @@ cd ./install-minikube
 #Lancer le provisionement de la VM à partir de Vagrant
 vagrant up
 ```
-> ![1-vagrant up] ![](images/vagrant-up.png)
+> ![1-vagrant up] ![](images/1-vagrant-up.png)
 
 2) Se connecter à la VM en ssh :
 ```bash
 #Se connecter à la VM en ssh
 vagrant ssh
 ```
-> ![2-vagrant ssh] ![](images/install-finish&vagrant-ssh.png)
+> ![2-vagrant ssh] ![](images/2-vagrant-ssh.png)
 
 3) Vérifier les images téléchargée lors du lancement de minikube :
 ```bash
 #Vérifier les images téléchargée lors du lancement de minikube :
 docker images
 ```
-> ![3-docker images] ![](images/docker-images.png)
+> ![3-docker images] ![](images/3-docker-images.png)
 
 4) Vérifier les nodes :
 ```bash
 #Vérifier les nodes :
 kubectl get nodes
 ```
-> ![4-kubectl-get-nodes] ![](images/kubectl-get-nodes.png)
+> ![4-kubectl-get-nodes] ![](images/4-kubectl-get-nodes.png)
 
 5) Vérifier les pods :
 ```bash
 #Vérifier les pods :
 kubectl get pods -A
 ```
-> ![5-kubectl-get-pods] ![](images/4-kubectl-get-pods-A.png)
+> ![5-kubectl-get-pods] ![](images/5-kubectl-get-pods-A.png)
