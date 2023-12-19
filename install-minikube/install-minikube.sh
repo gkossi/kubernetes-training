@@ -64,6 +64,8 @@ sudo echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
 sudo systemctl enable docker.service
 #On va installer minikube à partir du fichier rendu exécutable
 su - vagrant -c "minikube start --driver=none --kubernetes-version v1.23.0"
+#Pour l'autocomplétion:
+#echo ‘source <(kubectl completion bash)’ >> ${HOME}/.bashrc && source ${HOME}/.bashrc
 yum install bash-completion -y
 echo 'source <(kubectl completion bash)' >> ~vagrant/.bashrc
 echo 'alias k=kubectl' >> ~vagrant/.bashrc
