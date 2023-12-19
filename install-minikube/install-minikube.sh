@@ -70,8 +70,8 @@ sudo echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
 #On va activer le service docker au démarrage
 sudo systemctl enable docker.service
 #On va démarrer minikube à partir du fichier rendu exécutable qui va se charger de télécharger les images pour créer les conteneurs nécessaires : kube-apiserver, etcd, kube-scheduler, kube-controller-manager, kubelet, kube-proxy, coredns, kubectl
-#minikube start --vm-driver=none
-su - vagrant -c "minikube start --driver=none --kubernetes-version v1.23.0"
+minikube start --vm-driver=none
+#su - vagrant -c "minikube start --driver=none --kubernetes-version v1.23.0"
 #Pour l'autocomplétion:
 #echo ‘source <(kubectl completion bash)’ >> ${HOME}/.bashrc && source ${HOME}/.bashrc
 yum install bash-completion -y

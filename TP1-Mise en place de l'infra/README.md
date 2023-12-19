@@ -8,7 +8,11 @@ LinkedIn      : https://www.linkedin.com/in/gkossi/
 
 # TP N°1 : MISE EN PLACE DE L'INFRA
 
-Dans ce TP N°1, il est question de mettre en place une infrastructure basée sur Minikube (1 Master et 1 Worker) qui va de plateforme d'exploitation de Kubernetes.
+Dans ce TP N°1, il est question de mettre en place une infrastructure basée sur Minikube (1 Master et 1 Worker) qui va servir de plateforme d'exploitation de Kubernetes.
+
+NB: l'objectif est d'avoir une VM qui va renfermer les composants à la fois d'un Master et d'un Worker. On va donc créer à base de docker, les composants de kubernete (kube-apiserver, ETCD, kube-scheduler, kube-controler-manager, kubelet, kube-proxy et container runtine engine(docker)) sous forme de conteneurs à utiliser dans notre machine virtuelle 
+
+#On va installer les outils nécessaires et démarrer minikube à partir de son fichier exécutable qui va se charger de télécharger les images pour créer les conteneurs nécessaires tel que : kube-apiserver, etcd, kube-scheduler, kube-controller-manager, kubelet, kube-proxy, coredns, kubectl, storage-provisioner
 
 # Les Technos utilisées :
 
@@ -45,7 +49,6 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 
 </div>
 
-
 - VirtualBox : est un hyperviseur de type 2 qui va servir de provisioner à utiliser pour créer une VM
 - Vagrant : c'est un gestionnaire d'infrastructure as Code qui va servir à configurer notre infra sous forme de code
 - Vagrantfile: ce fichier contient tous les paramètres utilisés pour créer la machine virtuelle
@@ -55,49 +58,50 @@ Dans ce TP N°1, il est question de mettre en place une infrastructure basée su
 - Minikube: pour la mise en place d'un cluster Kubernetes (1 Master et 1 Worker)
 - Kubectl : la ligne de commande pour exploiter Kubernetes à partir de Minikube
 
-My job is to :
-1) Use Virtualbox as a hypervisor for the virtual machine creation
-2) Use Vagrant as infrastructure provisioner to manage the VM
-3) Install Docker and Docker-compose on the VM 
-4) Build one container for each module (Backend & Fronted)
-5) Make the containers interact with each other
-6) Provide a private registry to store images
 
-
-# My work plan
-
-Here's my plan for this project:
-
-- Firstly, I'm setting up my infrastructure from the code to be driven with the Vagrant tool (***Vagrantfile*** and ***install_docker-centos***). This will be a VM running the Centos7 OS with Docker and Docker-compose.
-
-- Secondly, I'm going to do the build and make the necessary tests. This stage will involve several actions on my part.
-
-- Then, as soon as the tests are correct, I proceed with the deployment
-
-
-
-# The files and their roles
-
-My delivery contain five main files : ***Vagrantfile***, ***install_docker-centos.sh***, ***Dockerfile***, ***docker-compose.yml*** and ***private-registry.yml***
-
-- Vagrantfile: this file contains all the parameters used to create the virtual machine
-- install_docker-centos.sh: this file contains the Docker and Docker-compose installation script
+# Les fichiers utilisés et leur role :
+- Vagrantfile: ce fichier contient tous les paramètres utilisés pour créer la machine virtuelle
+- install_minikube.sh: ce fichier contient le script d'installation de tous outils nécessaires étape par étape tel que : les pré-requis, Docker, Minikube, Kubectl
 
 
 
 
-## Step N°1 : Building images
+## Step N°1 : Provisionement de la VM à partir de Vagrant
 
-1) Enter the API directory and build it's container image :
-
+1) Entrer dans le répertoire d'installation et lancer le provisionement :
 ```bash
-#Enter the directory
-cd ./mini-projet-docker/simple_api
+#Entrer dans le répertoire d'installation
+cd ./install-minikube
 
-#Buil the image
-docker build -t student-list-api-image .
+#Lancer le provisionement de la VM à partir de Vagrant
+vagrant up
+```
+> ![1-vagrant up] ![](images/vagrant-up.png)
 
-#Verify that the image is built and present localy
+2) Se connecter à la VM en ssh :
+```bash
+#Se connecter à la VM en ssh
+vagrant ssh
+```
+> ![2-vagrant ssh] ![](images/install-finish&vagrant-ssh.png)
+
+3) Vérifier les images téléchargée lors du lancement de minikube :
+```bash
+#Vérifier les images téléchargée lors du lancement de minikube :
 docker images
 ```
-> ![1-docker images] ![](images/docker-images.jpg)
+> ![3-docker images] ![](images/docker-images.png)
+
+4) Vérifier les nodes :
+```bash
+#Vérifier les nodes :
+kubectl get nodes
+```
+> ![4-kubectl-get-nodes] ![](images/kubectl-get-nodes.png)
+
+5) Vérifier les pods :
+```bash
+#Vérifier les pods :
+kubectl get pods -A
+```
+> ![5-kubectl-get-pods] ![](images/4-kubectl-get-pods-A.png)
