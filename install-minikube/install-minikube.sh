@@ -25,13 +25,14 @@ sudo yum install -y conntrack
 #installation d'autres paquets nécessaires
 sudo yum install -y curl wget
 
+#NB: l'objectif est de créer à base de docker, les composants de kubernete (kube-apiserver, ETCD, kube-scheduler, kube controle manager, DNS) sous forme de conteneurs à utiliser dans notre machine virtuelle 
 
 #---ETAPE N°3: INSTALLATION DE DOCKER----------------------------------------------------------------------------
 #Récupérer le script d'installation de docker
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 #Inspecter le contenu du script pour des raisons de sécurité (Optionnel)
 cat get-docker.sh
-#Vérifier les étape qui seront effectuées lorsque le script sera exécuté (pour des raison de sécurité)
+#Vérifier les étapes qui seront effectuées lorsque le script sera exécuté (pour des raison de sécurité)
 sh get-docker.sh --dry-run
 #Exécuter le script en mode root
 sudo sh get-docker.sh
@@ -52,17 +53,24 @@ sudo wget https://storage.googleapis.com/minikube/releases/v1.28.0/minikube-linu
 sudo chmod +x minikube-linux-amd64
 #On va déplacer minikube dans le répertoire des binaires sous linux
 sudo mv minikube-linux-amd64 /usr/bin/minikube
-#On va Récupérer l'utilitaire de ligne de commande de minikube (kubectl)
+
+#---ETAPE N°5: INSTALLATION DE KUBECTL--------------------------------------------------------
+#On va Récupérer l'utilitaire de ligne de commande de kubernete (kubectl)
 sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.0/bin/linux/amd64/kubectl
 #On va le rendre exécutable
 sudo chmod +x kubectl
 #On va déplacer minikube dans le répertoire des binaires sous linux
 sudo mv kubectl  /usr/bin/
-#On va configurer le forwarding pour l'accès réseau
+
+#---ETAPE N°6: CONFIGURATION DU FORWARDING--------------------------------------------------------
+#On va configurer le forwarding au niveau des interface réseau pour l'accès réseau
 sudo echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
+
+#---ETAPE N°7: DEMARRAGE DES SERVICES--------------------------------------------------------
 #On va activer le service docker au démarrage
 sudo systemctl enable docker.service
-#On va installer minikube à partir du fichier rendu exécutable
+#On va démarrer minikube à partir du fichier rendu exécutable qui va se charger de télécharger les images pour créer les conteneurs nécessaires : kube-apiserver, etcd, kube-scheduler, kube-controller-manager, kubelet, kube-proxy, coredns, kubectl
+#minikube start --vm-driver=none
 su - vagrant -c "minikube start --driver=none --kubernetes-version v1.23.0"
 #Pour l'autocomplétion:
 #echo ‘source <(kubectl completion bash)’ >> ${HOME}/.bashrc && source ${HOME}/.bashrc
@@ -72,7 +80,7 @@ echo 'alias k=kubectl' >> ~vagrant/.bashrc
 echo 'complete -F __start_kubectl k' >> ~vagrant/.bashrc
 
 
-#---ETAPE N°5: INSTALLATION DU SHELL ZSH-------------------------------------------------------------------------
+#---ETAPE N°8: INSTALLATION DU SHELL ZSH-------------------------------------------------------------------------
 if [[ !(-z "$ENABLE_ZSH")  &&  ($ENABLE_ZSH == "true") ]]
 then
     echo "We are going to install zsh"
