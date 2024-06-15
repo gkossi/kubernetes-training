@@ -61,7 +61,7 @@ Pour se faire, on va exécter les 2 commandes suivantes :
 kubectl apply -f pod.yml
 kubectl get pod
 ```
-> ![1-Pod: création et exécution] ![](images/1-pod-cr.jpg)
+> ![1-Pod: création et exécution] ![](images/1-pod-cr.JPG)
 
 ## Task N°3:
 2) Se connecter à la VM en ssh :
