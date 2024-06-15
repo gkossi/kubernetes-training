@@ -55,7 +55,13 @@ spec:
 ```
 
 ## Task N°2: Lancez votre pod et vérifiez qu’il est bien en cours d’exécution
-> ![1-vagrant up] ![](images/1-vagrant-up.png)
+
+Pour se faire, on va exécter les 2 commandes suivantes :
+```bash
+kubectl apply -f pod.yml
+kubectl get pod
+```
+> ![1-Pod: création et exécution] ![](images/1-pod-cr.jpg)
 
 ## Task N°3:
 2) Se connecter à la VM en ssh :
