@@ -69,13 +69,12 @@ kubectl port-forward simple-webapp-color 8080:8080 --address 0.0.0.0
 ```
 > ![2-Pod: port forwarding] ![](images/2-port-forwarding.JPG)
 
-## Task N°4:
-3) Vérifier les images téléchargée lors du lancement de minikube :
+## Task N°4: Vérifiez que l’application est bien joignagle en ouvrant le port 8080 de votre node
+Pour se faire, on va accéder à l'adresse ip de notre machine virtuelle dans un navigateur web sur le port 8080 :
 ```bash
-#Vérifier les images téléchargée lors du lancement de minikube :
-docker images
+http://192.168.99.126:8080
 ```
-> ![3-docker images] ![](images/3-docker-images.png)
+> ![3-Pod: Accès à l'application] ![](images/3-access-webapp.JPG)
 
 ## Task N°5:
 4) Vérifier les nodes :
