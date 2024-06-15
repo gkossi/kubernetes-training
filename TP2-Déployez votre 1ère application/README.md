@@ -55,7 +55,6 @@ spec:
 ```
 
 ## Task N°2: Lancez votre pod et vérifiez qu’il est bien en cours d’exécution
-
 Pour se faire, on va exécter les 2 commandes suivantes :
 ```bash
 kubectl apply -f pod.yml
@@ -63,13 +62,12 @@ kubectl get pod
 ```
 > ![1-Pod: création et exécution] ![](images/1-pod-cr.JPG)
 
-## Task N°3:
-2) Se connecter à la VM en ssh :
+## Task N°3: Exposez votre pod en utilisant la commande kubectl port forward <nom de votre pod > 8080:8080 address 0.0.0.0
+Pour se faire, on va exécter la commande suivante :
 ```bash
-
+kubectl port-forward simple-webapp-color 8080:8080 --address 0.0.0.0
 ```
-
-> ![2-vagrant ssh] ![](images/2-vagrant-ssh.png)
+> ![2-Pod: port forwarding] ![](images/2-port-forwarding.JPG)
 
 ## Task N°4:
 3) Vérifier les images téléchargée lors du lancement de minikube :
