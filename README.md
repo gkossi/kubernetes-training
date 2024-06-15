@@ -10,6 +10,39 @@ Nom & Prénoms : GBENOU Kossi
 
 LinkedIn      : https://www.linkedin.com/in/gkossi/
 
+# Les Technos utilisées :
+
+<div align="center">
+
+<img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/vagrant/vagrant-original.svg" width="45" height="45"/>
+<a href="https://git-scm.com/" target="_blank">
+	<img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/git/git-original.svg" width="45" height="45"/>
+</a>
+<a href="https://www.docker.com/" target="_blank">
+	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="45" height="45"/>
+</a>
+<a href="https://kubernetes.io" target="_blank">
+	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg" alt="kubernetes" width="45" height="45"/>
+</a>
+<img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/centos/centos-original.svg" width="45" height="45"/> 
+<a href="https://www.gnu.org/software/bash/" target="_blank"> 
+	<img src="https://github.com/devicons/devicon/blob/v2.15.1/icons/bash/bash-original.svg" alt="bash" width="45" height="45"/>  
+</a>
+</div>
+
+<br />
+<div align="center">
+
+![Static Badge](https://img.shields.io/badge/VirtualBox-red?style=for-the-badge&logo=VirtualBox&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Vagrant-430098?style=for-the-badge&logo=Vagrant&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Git-black?style=for-the-badge&logo=Git&logoColor=red)
+![Static Badge](https://img.shields.io/badge/Docker-white?style=for-the-badge&logo=Docker&logoColor=2CA5E0)
+![Static Badge](https://img.shields.io/badge/Kubernetes-2CA5E0?style=for-the-badge&logo=Kubernetes&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Centos-cyan?style=for-the-badge&logo=Centost&logoColor=white)
+
+
+</div>
+
 ## TP1: Installation de k8s
 > ![TP1-Installation de k8s] ![](images/TP1-Installation-de-k8s.jpg)
 
