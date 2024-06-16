@@ -8,7 +8,6 @@ LinkedIn      : https://www.linkedin.com/in/gkossi/
 
 # TP N°2 : DÉPLOYEZ VOTRE PREMIÈRE APPLICATION
 
-## TP2: Déployez votre 1ère application
 > ![TP2-Déployez votre 1ère application] ![](images/TP2-Déployez-votre-1ère-application.jpg)
 
 • Ecrivez un manifest pod.yml pour déployer un pod avec l’image *mmumshad/simple-webapp-color* en précisant que la color souhaitée est la rouge
